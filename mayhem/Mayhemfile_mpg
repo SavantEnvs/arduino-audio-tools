@@ -1,0 +1,9 @@
+project: savantenvs/arduino-audio-tools
+target: mpg
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mpg/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mpg
+    libfuzzer: true
+    timeout: 10
