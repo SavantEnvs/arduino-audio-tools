@@ -1,0 +1,9 @@
+project: savantenvs/arduino-audio-tools
+target: m4a
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/m4a/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_m4a
+    libfuzzer: true
+    timeout: 10

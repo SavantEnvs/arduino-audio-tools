@@ -1,0 +1,9 @@
+project: savantenvs/arduino-audio-tools
+target: http_header
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/http_header/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_http_header
+    libfuzzer: true
+    timeout: 10

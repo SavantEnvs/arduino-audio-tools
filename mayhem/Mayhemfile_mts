@@ -1,0 +1,9 @@
+project: savantenvs/arduino-audio-tools
+target: mts
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mts/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mts
+    libfuzzer: true
+    timeout: 10

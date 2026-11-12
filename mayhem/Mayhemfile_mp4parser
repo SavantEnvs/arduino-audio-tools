@@ -1,0 +1,9 @@
+project: savantenvs/arduino-audio-tools
+target: mp4parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mp4parser/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mp4parser
+    libfuzzer: true
+    timeout: 10

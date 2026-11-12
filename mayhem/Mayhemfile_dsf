@@ -1,0 +1,9 @@
+project: savantenvs/arduino-audio-tools
+target: dsf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/dsf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dsf
+    libfuzzer: true
+    timeout: 10

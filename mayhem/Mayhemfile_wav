@@ -1,0 +1,9 @@
+project: savantenvs/arduino-audio-tools
+target: wav
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/wav/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_wav
+    libfuzzer: true
+    timeout: 10
